@@ -4,6 +4,8 @@ Little project to demonstrate how Spring Cloud Gateway is hanging when an except
 because `Content-Length` is already set to a larger value, presumably the length of the original payload, making
 RestAssured wait and never finish.
 
+This was filed as [this issue](https://github.com/spring-cloud/spring-cloud-gateway/issues/655).
+
 ## Usage
 
 Run:

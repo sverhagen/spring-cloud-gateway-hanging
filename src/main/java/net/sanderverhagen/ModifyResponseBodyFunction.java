@@ -13,6 +13,11 @@ public class ModifyResponseBodyFunction {
         // making RestAssured wait and never finish; it's weird
 //        exchange.getResponse().getHeaders().remove("Content-Length");
 
-        throw new RuntimeException("something wrong");
+        // make some modifications, we're in a "modifyResponseBody" filter after all
+        //((ObjectNode) jsonNode).set("someNewKey", someNewStuff());
+
+        throw new RuntimeException("something wrong"); // imagine this exception thrown from someNewStuff()
+
+        // return Mono.just(jsonNode);
     }
 }
